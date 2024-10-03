@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💻 Descomposición LU 💡</title>
+
+    <!-- Cargar los estilos CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>💻 Descomposición LU 💡</h1>
+
+        <!-- Sección de generación de la matriz -->
+        <section>
+            <label for="tamano">Introduce el número de filas = columnas (Matriz cuadrada):</label>
+            <input type="number" id="tamano" min="2" max="10" placeholder="Tamaño" class="input-field">
+            <button class="btn" onclick="generarInputs()">Generar Matriz</button>
+
+            <div id="inputsMatriz"></div>
+        </section>
+
+        <!-- Sección para mostrar los resultados de la descomposición LU -->
+        <section id="resultado"></section>
+
+        <!-- Sección: ¿Qué es una matriz LU? -->
+        <section>
+            <h2>❓ ¿Qué es una Matriz LU? 📊</h2>
+            <p>Una descomposición LU es el proceso de descomponer una matriz en el producto de dos matrices: una matriz triangular inferior <strong>(L)</strong> y una matriz triangular superior <strong>(U)</strong>. La matriz <strong>L</strong> contiene los factores usados para eliminar elementos debajo de la diagonal principal, mientras que la matriz <strong>U</strong> contiene los valores resultantes de la eliminación.</p>
+        </section>
+
+        <!-- Sección: ¿Para qué se usa? -->
+        <section>
+            <h2>🔍 ¿Para qué se usa? 💼</h2>
+            <p>La descomposición LU es útil para resolver sistemas de ecuaciones lineales, invertir matrices y calcular determinantes de forma eficiente. Además, se usa en muchos problemas prácticos que involucran álgebra lineal.</p>
+        </section>
+
+        <!-- Sección: Ejemplos de uso de descomposición LU en la vida cotidiana -->
+        <section>
+            <h2>🌍 5 Ejemplos de Uso en la Vida Cotidiana</h2>
+            <ol>
+                <li><strong>🚗 Simulación de tráfico:</strong> En simulaciones de tráfico, la descomposición LU ayuda a resolver sistemas de ecuaciones para modelar el flujo vehicular en intersecciones.</li>
+                <li><strong>✈️ Optimización de rutas aéreas:</strong> Las aerolíneas utilizan descomposición LU para optimizar las rutas de vuelo y minimizar el consumo de combustible.</li>
+                <li><strong>🏗️ Ingeniería estructural:</strong> Para diseñar puentes y edificios, los ingenieros usan matrices LU para calcular la distribución de fuerzas y tensiones.</li>
+                <li><strong>🖼️ Procesamiento de imágenes:</strong> Se usa en algoritmos que requieren la inversión de matrices, como en la reconstrucción de imágenes en alta resolución.</li>
+                <li><strong>💼 Finanzas:</strong> En la predicción de riesgos financieros y análisis de cartera, se usa LU para resolver ecuaciones lineales complejas relacionadas con el mercado de valores.</li>
+            </ol>
+        </section>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>With ♥ by R (686f6c61)</p>
+        </div>
+    </div>
+
+    <!-- Cargar el script JS -->
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

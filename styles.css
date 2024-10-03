@@ -1,0 +1,84 @@
+/* Estilos personalizados para mejorar la apariencia */
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #0d47a1;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3, h4 {
+    font-size: 1.25rem;
+}
+
+/* Forzar negrita en los elementos <strong> */
+strong {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #0d47a1;
+    padding: 5px;
+    text-align: center;
+}
+
+td input {
+    width: 60px;
+    padding: 5px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.btn {
+    background-color: #0d47a1;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Ajustar el tamaño del campo de entrada para filas y columnas */
+.input-field {
+    width: 70px;
+    margin-left: 10px;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #0d47a1;
+    font-size: 0.9rem;
+}
+
+/* Estilos responsive */
+@media (max-width: 600px) {
+    td input {
+        width: 40px;
+    }
+
+    .input-field {
+        width: 50px;
+    }
+}
