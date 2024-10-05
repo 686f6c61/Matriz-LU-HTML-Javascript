@@ -38,14 +38,20 @@ function descomposicionLU() {
             }
             if (k < r) {
                 // Calcular el factor para hacer ceros debajo de la diagonal
-                let factor = matriz[r][k] / matriz[k][k];
+                let divisor = matriz[k][k];
+                let factor = divisor !== 0 ? matriz[r][k] / divisor : 0;
+                
+                // Evitar valores Infinity y NaN
+                factor = isFinite(factor) ? factor : 0;
+                
                 l[r][k] = factor;  // Guardamos el factor en la matriz L
                 document.getElementById("resultado").innerHTML += `<p>Factor en L[${r + 1},${k + 1}] = ${factor.toFixed(2)}</p>`;
                 
                 // Actualizar la matriz U restando el factor
                 for (let c = 0; c < m; c++) {
                     matriz[r][c] = matriz[r][c] - factor * matriz[k][c];
-                    u[r][c] = matriz[r][c];  // Actualizar U
+                    // Evitar valores -0, Infinity y NaN
+                    u[r][c] = isFinite(matriz[r][c]) ? (matriz[r][c] === 0 ? 0 : matriz[r][c]) : 0;
                 }
             }
         }
@@ -64,7 +70,8 @@ function mostrarMatriz(nombre, matriz) {
     for (let r = 0; r < m; r++) {
         resultado += "<tr>";
         for (let c = 0; c < m; c++) {
-            resultado += `<td>${matriz[r][c].toFixed(2)}</td>`;
+            let valor = isFinite(matriz[r][c]) ? matriz[r][c] : 0;
+            resultado += `<td>${valor.toFixed(2)}</td>`;
         }
         resultado += "</tr>";
     }
